@@ -6,7 +6,7 @@ const basicFetch = async (endpoint) => {
     const req = await fetch('${API_BASE}${endpoint}');
     console.log(req);
     const json = await req.json();
-    //console.log(json);
+    console.log(json);
     return json;
 }
 
@@ -16,7 +16,7 @@ export default {
             {
                 slug: 'originals',
                 title: 'Originais do Netflix',
-                items: await basicFetch('/discovery/tv?with_network=213&language=pt-BR&api_key=${API_KEY}')
+                items: await basicFetch('/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}')
             },
             {
                 slug: 'trending',

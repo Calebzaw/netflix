@@ -11,7 +11,7 @@ export default () => {
     useEffect(() => {
         const loadAll = async () => {
             const list = await Tmdb.getHomeList();
-            console.log(list);
+            //console.log(list);
             setMovieList(list);
         }
         loadAll();
