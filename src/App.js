@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
-
+//https://github.com/toandriottibertoni/react-netflix-clone-ui
 
 export default () => {
 
@@ -10,7 +10,7 @@ export default () => {
 
     useEffect(() => {
         const loadAll = async () => {
-            const list = await Tmdb.getHomeList();
+            let list = await Tmdb.getHomeList();
             //console.log(list);
             setMovieList(list);
         }
